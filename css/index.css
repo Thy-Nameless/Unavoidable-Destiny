@@ -1,0 +1,177 @@
+/* MAIN CSS */
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Regular'), local('Roboto-Regular'),
+        url('../font/Roboto-Regular.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Roboto Italics';
+    src: local('Roboto Italics'), local('Roboto-Italics'),
+        url('../font/Roboto-Italic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }
+body {
+    position:absolute;
+    background-color: black;
+    width: min(100vw, 177.77vh);
+    height: min(56.25vw, 100vh);
+    margin:0 auto;
+    color: white;
+    overflow: hidden;
+    font-family:'Roboto Italics';
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+main {
+    width: min(100vw, 177.77vh);
+    height: min(56.25vw, 100vh);
+    background-image: url("../image/backgroundS.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#desktop {
+    width: min(100vw, 177.77vh);
+    height:min(53.4375vw, 95vh);
+    position:absolute;
+}
+
+#taskbar {
+    position: absolute;
+    BORDER-TOP: min(0.185625vw, 0.33vh) solid grey;
+    top: min(53.4375vw, 95vh);
+    width: min(100vw, 177.77vh);
+    height:min(2.626875vw, 4.67vh);
+    background-color:#222222;
+}
+
+/** taskbar stuff */
+
+#osoutline{
+    height:min(2.8125vw, 5vh);
+    width: min(9vw, 16vh);
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+    box-shadow: 0 min(0.185625vw, 0.33vh) 0px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+#osbutton{
+    position: absolute;
+    top: min(0.5625vw, 1vh);
+    left: min(0.5625vw, 1vh);
+    height: min(1.6875vw, 3vh);
+    width: min(9vw, 16vh);
+    overflow:hidden;
+}
+#osoutline:hover { 
+    background: #333333;
+}
+#osicon{
+    aspect-ratio: 1 / 1;
+    height: min(1.6875vw, 3vh);
+    background-image: url("../image/logo.png");
+    background-size: cover;
+    float:left;
+}
+#ostext{
+    font-size: min(1.40625vw, 2.5vh);
+    margin-left:min(1.6875vw, 3vh);
+    height: min(1.6875vw, 3vh);
+    width: calc(min(9vw, 16vh) - min(1.6875vw, 3vh) - min(1.6875vw, 3vh));
+    float:left;
+    /**text-shadow: calc(min(0.0562vw, 0.1vh) - min(0.0562vw, 0.1vh) * 2) min(0.0562vw, 0.1vh) 0 #000,
+                 min(0.0562vw, 0.1vh) min(0.0562vw, 0.1vh) 0 #000,
+                 min(0.0562vw, 0.1vh) calc(min(0.0562vw, 0.1vh) - min(0.0562vw, 0.1vh) * 2) 0 #000,
+                 calc(min(0.0562vw, 0.1vh) - min(0.0562vw, 0.1vh) * 2) calc(min(0.0562vw, 0.1vh) - min(0.0562vw, 0.1vh) * 2) 0 #000;*/
+}
+
+/** taskbar menu stuff */
+
+
+
+#osmenu{
+    position: absolute;
+    height: min(16.875vw, 30vh);
+    width: min(14.0625vw, 25vh);
+    top: min(53.4375vw, 95vh);
+    background-color:#222222;
+}
+#hideosmenu{
+    position: absolute;
+    height: min(16.875vw, 30vh);
+    width: min(14.248125vw, 25.33vh);
+    top: min(56.25vw, 100vh);
+    background-color:#000000;
+}
+
+/** desktop stuff */
+
+.deskapp{
+    height: min(5.625vw, 10vh);
+    width: min(7.3125vw, 13vh);
+    margin-top:min(2.8125vw, 5vh);
+    margin-left:min(2.8125vw, 5vh);
+}
+.deskappShadow{
+    height: min(5.625vw, 10vh);
+    width: min(7.3125vw, 13vh);
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+    border-radius: min(1.40625vw, 2.5vh);
+}
+.deskapp ~ .deskapp{
+    margin-top:min(1.125vw, 2vh);
+}
+.deskappShadow:hover{
+    background: rgba(40, 40, 40, 0.8);
+}
+.deskicon{
+    aspect-ratio: 1 / 1;
+    height: min(3.9375vw, 7vh);
+    margin-left:min(1.6875vw, 3vh);
+}
+.desktext{
+    font-family: 'Roboto';
+    height:min(1.6875vw, 3vh);
+    width:min(7.3125vw, 13vh);
+    font-size: min(1.125vw, 2vh);
+    text-align:center;
+    /**text-shadow: calc(min(0.0562vw, 0.1vh) - min(0.0562vw, 0.1vh) * 2) min(0.0562vw, 0.1vh) 0 #000,
+                 min(0.0562vw, 0.1vh) min(0.0562vw, 0.1vh) 0 #000,
+                 min(0.0562vw, 0.1vh) calc(min(0.0562vw, 0.1vh) - min(0.0562vw, 0.1vh) * 2) 0 #000,
+                 calc(min(0.0562vw, 0.1vh) - min(0.0562vw, 0.1vh) * 2) calc(min(0.0562vw, 0.1vh) - min(0.0562vw, 0.1vh) * 2) 0 #000;*/
+}
+#birdle {
+    background-image: url("../image/birdle.png");
+    background-size: cover;
+}
+#message {
+    background-image: url("../image/message.png");
+    background-size: cover;
+}
+#calendar {
+    background-image: url("../image/calendar.png");
+    background-size: cover;
+}
+#note {
+    background-image: url("../image/note.png");
+    background-size: cover;
+}
+#wiki {
+    background-image: url("../image/wiki.png");
+    background-size: cover;
+}
