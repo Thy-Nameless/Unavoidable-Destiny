@@ -50,7 +50,11 @@ session_start();
             </div></div>
         </div>
         <div id='osmenu'>
-            
+            <div class='osmenuoption'><div class='osmenuoptiontext'>New Save</div></div>
+            <div class='osmenuoption'><div class='osmenuoptiontext'>Load Save</div></div>
+            <div class='osmenuoption'><div class='osmenuoptiontext'>Control Panel</div></div>
+            <div class='osmenuoption'><div class='osmenuoptiontext'>Log Out</div></div>
+            <div class='osmenuoption'><div class='osmenuoptiontext'>Shut Down</div></div>
         </div>
         <div id='taskbar'>
             <div id='osoutline'>

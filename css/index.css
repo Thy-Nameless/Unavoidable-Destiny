@@ -22,7 +22,7 @@ body {
     margin:0 auto;
     color: white;
     overflow: hidden;
-    font-family:'Roboto Italics';
+    font-family:'Roboto';
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
@@ -49,10 +49,10 @@ main {
 
 #taskbar {
     position: absolute;
-    BORDER-TOP: min(0.185625vw, 0.33vh) solid grey;
+    BORDER-TOP: min(0.185625vw, 0.3vh) solid grey;
     top: min(53.4375vw, 95vh);
     width: min(100vw, 177.77vh);
-    height:min(2.626875vw, 4.67vh);
+    height:min(2.7vw, 4.8vh);
     background-color:#222222;
 }
 
@@ -91,6 +91,7 @@ main {
     height: min(1.6875vw, 3vh);
     width: calc(min(9vw, 16vh) - min(1.6875vw, 3vh) - min(1.6875vw, 3vh));
     float:left;
+    font-family:'Roboto Italics';
     /**text-shadow: calc(min(0.0562vw, 0.1vh) - min(0.0562vw, 0.1vh) * 2) min(0.0562vw, 0.1vh) 0 #000,
                  min(0.0562vw, 0.1vh) min(0.0562vw, 0.1vh) 0 #000,
                  min(0.0562vw, 0.1vh) calc(min(0.0562vw, 0.1vh) - min(0.0562vw, 0.1vh) * 2) 0 #000,
@@ -99,14 +100,15 @@ main {
 
 /** taskbar menu stuff */
 
-
-
 #osmenu{
     position: absolute;
-    height: min(16.875vw, 30vh);
-    width: min(14.0625vw, 25vh);
+    height: min(16.81875vw, 29.9vh);
+    width: min(14.00625vw, 24.9vh);
     top: min(53.4375vw, 95vh);
     background-color:#222222;
+    BORDER-TOP: min(0.05625vw, 0.1vh) solid grey;
+    BORDER-RIGHT: min(0.05625vw, 0.1vh) solid grey;
+    border-radius: 0 min(0.5625vw, 1vh) 0 0;
 }
 #hideosmenu{
     position: absolute;
@@ -115,7 +117,26 @@ main {
     top: min(56.25vw, 100vh);
     background-color:#000000;
 }
-
+.osmenuoption{
+    height:min(3.31875vw, 5.9vh);
+    width: min(14.00625vw, 24.9vh);
+}
+.osmenuoption ~ .osmenuoption{
+    BORDER-TOP: min(0.05625vw, 0.1vh) solid grey;
+}
+.osmenuoption:hover{
+    background: #333333;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+.osmenuoptiontext{
+    text-align:center;
+    font-size: min(1.40625vw, 2.5vh);
+    vertical-align: middle;
+    line-height:min(3.31875vw, 5.9vh);
+}
 /** desktop stuff */
 
 .deskapp{
@@ -145,7 +166,6 @@ main {
     margin-left:min(1.6875vw, 3vh);
 }
 .desktext{
-    font-family: 'Roboto';
     height:min(1.6875vw, 3vh);
     width:min(7.3125vw, 13vh);
     font-size: min(1.125vw, 2vh);
